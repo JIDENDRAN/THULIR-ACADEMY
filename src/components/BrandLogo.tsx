@@ -41,31 +41,32 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
       {/* Brand Identity Typography Lockup */}
       <div className="d-flex flex-column leading-tight">
-        <div className="d-flex align-items-center gap-1.5 flex-wrap">
+        <div className="d-flex align-items-baseline gap-2 flex-wrap">
           <span
             style={{
               fontFamily: 'var(--font-heading)',
               fontWeight: 800,
-              letterSpacing: '-0.02em',
+              letterSpacing: '0.02em',
               fontSize: brandTitleSize,
               color: isLight ? '#FFFFFF' : '#0B2238',
-              lineHeight: 1.15
+              lineHeight: 1.15,
+              textTransform: 'uppercase'
             }}
           >
-            Thulir
+            THULIR
           </span>
           <span
             style={{
               fontFamily: 'var(--font-heading)',
               fontWeight: 700,
-              fontSize: size === 'sm' ? '0.825rem' : '0.925rem',
+              fontSize: size === 'sm' ? '0.85rem' : '0.975rem',
               color: '#B45309',
-              letterSpacing: '0.08em',
+              letterSpacing: '0.06em',
               textTransform: 'uppercase',
               lineHeight: 1.15
             }}
           >
-            Institute
+            INSTITUTE
           </span>
         </div>
 
