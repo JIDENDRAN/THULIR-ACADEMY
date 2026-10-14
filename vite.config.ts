@@ -1,0 +1,38 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    allowedHosts: true,
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules')) {
+            if (
+              id.includes('/react/') ||
+              id.includes('/react-dom/') ||
+              id.includes('/react-router-dom/')
+            ) {
+              return 'vendor-react';
+            }
+            if (id.includes('/framer-motion/') || id.includes('/gsap/')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('/lucide-react/') || id.includes('/bootstrap/')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('/react-hook-form/') || id.includes('/zod/')) {
+              return 'vendor-forms';
+            }
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
+  },
+});

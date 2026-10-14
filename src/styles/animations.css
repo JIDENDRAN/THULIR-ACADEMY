@@ -1,0 +1,291 @@
+/* ==========================================================================
+   ADVANCED ANIMATION & VISUAL EFFECTS SYSTEM — THULIR INSTITUTE
+   ========================================================================== */
+
+/* 1. Keyframes */
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-0.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(37, 99, 235, 0);
+  }
+}
+
+@keyframes pulseRadar {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes shimmerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes auroraGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1) translate(0px, 0px);
+  }
+  33% {
+    opacity: 0.65;
+    transform: scale(1.1) translate(25px, -15px);
+  }
+  66% {
+    opacity: 0.5;
+    transform: scale(0.95) translate(-20px, 20px);
+  }
+}
+
+@keyframes borderBeam {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes subtleSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. Utility Classes */
+
+.animate-float {
+  animation: floatSoft 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.animate-radar {
+  animation: pulseRadar 2s infinite;
+}
+
+.animate-subtle-spin {
+  animation: subtleSpin 25s linear infinite;
+}
+
+/* Aurora & Mesh Lighting Orbs */
+.aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  animation: auroraGlow 9s ease-in-out infinite;
+}
+
+.aurora-blue {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.28) 0%, rgba(37, 99, 235, 0) 70%);
+}
+
+.aurora-emerald {
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.24) 0%, rgba(5, 150, 105, 0) 70%);
+}
+
+.aurora-amber {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0) 70%);
+}
+
+/* Infinite Marquee Track */
+.marquee-wrapper {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  align-items: center;
+  animation: marqueeLeft 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-wrapper:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Shimmer Gradient Text */
+.text-shimmer {
+  background: linear-gradient(
+    120deg,
+    #102A43 0%,
+    #2563EB 30%,
+    #059669 60%,
+    #2563EB 80%,
+    #102A43 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerGradient 6s ease-in-out infinite;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #38BDF8 0%, #34D399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Glow & Glassmorphism Upgrades */
+.card-glass-morphic {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(16, 42, 67, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glass-morphic:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.18);
+}
+
+.card-glow-cyber {
+  background: rgba(16, 42, 67, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 35px rgba(37, 99, 235, 0.2);
+  transition: all 0.35s ease;
+}
+
+.card-glow-cyber:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 50px rgba(56, 189, 248, 0.35);
+}
+
+/* Interactive Pill Quick Tags */
+.quick-pill {
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  color: var(--thulir-navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(16, 42, 67, 0.04);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.quick-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--thulir-blue);
+  color: var(--thulir-blue);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+}
+
+/* Bento Grid Styles */
+.bento-card-main {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card-main:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px -12px rgba(16, 42, 67, 0.14);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-float,
+  .animate-float-reverse,
+  .animate-pulse-glow,
+  .animate-radar,
+  .animate-subtle-spin,
+  .marquee-content,
+  .aurora-orb,
+  .text-shimmer {
+    animation: none !important;
+  }
+
+  .card-glass-morphic:hover,
+  .bento-card-main:hover {
+    transform: none !important;
+  }
+}

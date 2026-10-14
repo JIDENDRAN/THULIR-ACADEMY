@@ -1,0 +1,79 @@
+:root {
+  /* ==========================================================================
+     WARM LINEN, BISQUE & OXFORD NAVY ACADEMIC PALETTE
+     LIGHT, REFINED, COMFORTABLE ON EYES — DISTINCTLY NOT WHITE
+     ========================================================================== */
+  
+  /* Primary Foundation Canvas: Warm Linen Sand (Not White) */
+  --thulir-bg-main: #F3EFE6;
+  --thulir-bg-surface: #EAE3D5;
+  --thulir-bg-surface-elevated: #FAF6EE;
+  --thulir-bg-card: #FAF6EE;
+  --thulir-bg-card-hover: #FDFBF7;
+  
+  /* Deep Oxford Navy Institutional Foundation */
+  --thulir-navy: #0B2238;
+  --thulir-navy-dark: #061625;
+  --thulir-navy-light: #163654;
+  --thulir-navy-surface: #1E466D;
+  
+  /* High-Impact Interactive Accents */
+  --thulir-blue: #1D4ED8;
+  --thulir-blue-dark: #1E40AF;
+  --thulir-blue-light: #3B82F6;
+  --thulir-blue-subtle: #E2ECFA;
+
+  /* Prestige Accent: Burnished Gold */
+  --thulir-gold: #C59B27;
+  --thulir-gold-dark: #B45309;
+  --thulir-gold-light: #F59E0B;
+  --thulir-gold-subtle: #F7EFE1;
+
+  /* Secondary Discipline: Deep Emerald */
+  --thulir-emerald: #065F46;
+  --thulir-emerald-dark: #044E39;
+  --thulir-emerald-light: #10B981;
+  --thulir-emerald-subtle: #E6F4ED;
+
+  /* Modern Professional Teal Accent */
+  --thulir-teal: #0E7490;
+  --thulir-teal-light: #06B6D4;
+  --thulir-teal-subtle: #E0F2F7;
+
+  /* Background System (Warm Toned - No Harsh White) */
+  --thulir-bg-light: #F3EFE6;
+  --thulir-bg-white: #FAF6EE;
+  --thulir-bg-subtle: #EAE3D5;
+  
+  /* High-Contrast Executive Typography */
+  --thulir-text-primary: #0B2238;
+  --thulir-text-body: #2C3E50;
+  --thulir-text-muted: #607282;
+  --thulir-text-light: #8494A5;
+
+  /* Refined Sandstone Silk Borders */
+  --thulir-border-light: #DDD4C4;
+  --thulir-border-medium: #C8BCAB;
+  --thulir-border-accent: rgba(197, 155, 39, 0.4);
+
+  /* Typography */
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Refined Academic Elevation Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(11, 34, 56, 0.06);
+  --shadow-md: 0 4px 12px -1px rgba(11, 34, 56, 0.08), 0 2px 5px -2px rgba(11, 34, 56, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(11, 34, 56, 0.12), 0 4px 8px -4px rgba(11, 34, 56, 0.06);
+  --shadow-xl: 0 20px 38px -5px rgba(11, 34, 56, 0.16), 0 8px 14px -6px rgba(11, 34, 56, 0.08);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
